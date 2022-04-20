@@ -1,10 +1,6 @@
-from user_camera.camera import Camera
-from Hand_Tracking_Module import main, handDetector
-
+from camera import Camera
 class UserInterFace:
     def __init__(self):
-
-        self.message=''
         self.permission=None
         self.camera=Camera()
     def welcoming_message(self):
@@ -29,12 +25,11 @@ class UserInterFace:
         
     def start_learning(self):
         permission=self.permission
-        permission= input("Please provide permission to access the camera")
-
+        permission=input("Please provide permission to access the camera")
         if permission != None or "n" or "N":
-           # check Camera Class
+            # check Camera Class
             self.camera.open_camera()
-         
+
 
         else:
             #check
