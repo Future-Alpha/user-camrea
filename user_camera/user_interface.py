@@ -25,7 +25,7 @@ class UserInterFace:
         
     def start_learning(self):
         permission=self.permission
-        permission=input("Please provide permission to access the camera")
+        permission=input(" Please provide permission to access the camera : ")
         if permission != None or "n" or "N":
             # check Camera Class
             self.camera.open_camera()
